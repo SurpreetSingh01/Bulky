@@ -2,7 +2,9 @@ using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using BulkyWeb.Models;
 
-namespace BulkyWeb.Controllers;
+namespace BulkyWeb.Areas.Customer.Controllers
+{
+ [Area("Customer")]
 
 public class HomeController : Controller
 {
@@ -28,4 +30,5 @@ public class HomeController : Controller
     {
         return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
     }
+}
 }
